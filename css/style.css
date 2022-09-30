@@ -1,0 +1,340 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* scroll-behavior: smooth; */
+}
+html{
+    scroll-behavior: auto;
+}
+
+.nav{
+    background-color:#736f5d ;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 8vh;
+}
+.logo{
+    color: white;
+    font-weight: bold;
+    letter-spacing: 5px;
+    font-size: 28px;
+    text-transform: uppercase;
+    width: 30%;
+}
+.lista{
+    display: flex;
+    width: 40%;
+    justify-content: space-around;
+}
+.lista__li{
+    list-style: none;
+}
+.lista__a{
+    text-decoration: none;
+    color: white;
+    letter-spacing: 3px;
+    font-weight: bold;
+    font-size: 14px;
+}
+.lista__a::after{
+    content: "";
+    display: block;
+    width: 0px;
+    height: 3px;
+    border-radius: 1px;
+    background-color: white;
+    transition: width .3s;    
+}
+.lista__a:hover::after{
+    width: 100%;
+}
+.burger{
+    display: none
+}
+.burger div{
+    height: 3px;
+    width: 25px;
+    margin: 5px 0 5px 0;
+    border-radius: 20px;
+    background-color: white;
+    transition: all 2s ease-out;
+}
+@media  screen and (max-width: 1024px){
+    .lista{
+        width: 60%;
+    }
+}
+
+@media screen and (max-width: 830px){
+    body{
+    overflow-x: hidden;
+    }
+    .burger{
+        display: block;
+    }
+    .lista{
+        position: absolute;
+        right: 0px;
+        top: 8vh;
+        height: 92vh;
+        width: 50%;
+        background-color: #452368;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        transform: translate(100%);
+        transition: transform 1s;
+    }
+    .lista__li{
+        opacity: 0;
+        transform: translateX(100%);
+        }
+    .lista--activada .lista__li{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+    .lista--activada{
+        transform: translate(0%);
+    }
+    .toggle .burger__line1{
+        transform: translate(0px, 9px) rotate(-45deg);
+    }
+    .toggle .burger__line2{
+        opacity: 0;
+    }
+    .toggle .burger__line3{
+        transform:translate(0px, -7px) rotate(45deg);
+    }
+}
+
+.logo__span:hover{
+color: black;
+margin-left: -16px;
+font-size: 36px;
+}
+
+/* -------------------------- cabecero */
+
+.imagen_cabecero{
+    background-image: url(../img/cabecero.png);
+    width: 1536px;
+    height: 477px;
+    border-radius: 0px 0px 500px 500px;
+}
+
+.circulo{
+    width: 950px;
+    height: 750px;
+    border-radius: 50%;
+    border: 6px solid black;
+    position: absolute;
+    margin-top: 170px;
+    margin-left: 260px;
+    background-color: #736f5d;
+}
+
+.div_spacio{
+    background-color: #736f5d;
+    height: 15px;
+}
+
+.section_1{
+    width: 100%;
+    height: 1430px;
+    background-color: #F3DF7B;
+}
+.section_2{
+    width: 100%;
+    height: 1430px;
+    background-color: #F3DF7B;
+}
+.section_3{
+    width: 100%;
+    height: 1430px;
+    background-color: #F3DF7B;
+}
+
+.section_4{
+    width: 100%;
+    height: 200px;
+    background-color: #fffefa;
+}
+
+
+.boton_productos{
+    text-align: center;
+    font-size: 19px;
+    width: 260px;
+    height: 100px;
+    background-color: #000000;
+    border-radius: 0px 0px 150px 150px;
+    padding-top: 85px;
+    margin-left: 42%;
+    border: solid;
+    margin-bottom: 25px;
+    }
+    
+    .h1_productos{
+     color: white;
+    }
+
+.lol{
+    position: relative;
+    width: 300px;
+    height: 280px;
+    border-radius: 40%;
+    border: 6px solid black;
+}
+
+.zapatilla_1{
+    background-image: url(../img/negra.webp);
+    margin-top: -15px;
+    margin-left: -110px;
+}
+.zapatilla_2{
+    background-image: url(../img/agua_marina.webp);
+    margin-top: -286px;
+    margin-left: 760px;
+}
+.zapatilla_3{
+    background-image: url(../img/azul.jpg);
+    margin-top: 170px;
+    margin-left: -110px;
+}
+.zapatilla_4{
+    background-image: url(../img/blanca.jpg);
+    margin-top: -292px;
+    margin-left: 760px;
+}
+.zapatilla_5{
+    background-image: url(../img/rosa.webp);
+    margin-top: -889px;
+    margin-left: 324px;
+}
+.zapatilla_6{
+    background-image: url(../img/verde.webp);
+    margin-top: 469px;
+    margin-left: 324px;
+}
+
+.boton_zapatillas{
+    width: 240px;
+    height: 90px;
+    background-color: #F3DF7B;
+    border: 6px solid rgb(4, 4, 4);
+    border-radius: 50%;
+    text-align: center;
+    margin-top: -590px;
+    margin-left: 350px;
+}
+
+.h1_compra{
+    margin-top: 20px;
+}
+
+.gorra_1{
+    background-image: url(../img/gorra1.jpg);
+    margin-top: -15px;
+    margin-left: -110px;
+}
+.gorra_2{
+    background-image: url(../img/gorra3.jpg);
+    margin-top: -286px;
+    margin-left: 760px;
+}
+.gorra_3{
+    background-image: url(../img/gorra3.webp);
+    margin-top: 170px;
+    margin-left: -110px;
+}
+.gorra_4{
+    background-image: url(../img/gorra4.jpg);
+    margin-top: -292px;
+    margin-left: 760px;
+}
+.gorra_5{
+    background-image: url(../img/gorra5.jpg);
+    margin-top: -889px;
+    margin-left: 324px;
+}
+.gorra_6{
+    background-image: url(../img/gorra6.jpg);
+    margin-top: 469px;
+    margin-left: 324px;
+}
+
+.reloj_1{
+    background-image: url(../img/reloj1.jpg);
+    margin-top: -15px;
+    margin-left: -110px;
+}
+.reloj_2{
+    background-image: url(../img/reloj2.jpg);
+    margin-top: -286px;
+    margin-left: 760px;
+}
+.reloj_3{
+    background-image: url(../img/reloj3.jpg);
+    margin-top: 170px;
+    margin-left: -110px;
+}
+.reloj_4{
+    background-image: url(../img/reloj4.avif);
+    margin-top: -292px;
+    margin-left: 760px;
+}
+.reloj_5{
+    background-image: url(../img/reloj5.jpg);
+    margin-top: -889px;
+    margin-left: 324px;
+}
+.reloj_6{
+    background-image: url(../img/reloj6.jpg);
+    margin-top: 469px;
+    margin-left: 324px;
+}
+.direccion{
+    height: 65px;
+    width: 380px;
+    background-color: black;
+    color: white;
+    position: absolute;
+    text-align: center;
+    border-radius: 44px;
+    margin-top: -185px;
+    margin-left: 120px;
+}
+
+.telefono{
+    height: 95px;
+    width: 374px;
+    background-color: black;
+    color: white;
+    position: absolute;
+    text-align: center;
+    border-radius: 44px;
+    margin-top: -185px;
+    margin-left: 1020px;
+    
+}
+
+.h1_telefono{
+    font-size: 30px;
+    margin-top: 20px;
+}
+
+.enlaces{
+    text-decoration:none;
+}
+
+
+
+
+/* -
+#F3DF7B            amarillo
+#73693b            amarillo caca
+#736f5d            marron
+- */
